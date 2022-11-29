@@ -17,7 +17,7 @@ struct listint_s *b;
 a = list;
 while (a->next != NULL)
 {
-b = a-> next;
+b = a->next;
 while (b->next != NULL)
 {
 if (a == b->next)
