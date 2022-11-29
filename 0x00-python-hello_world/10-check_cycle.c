@@ -13,7 +13,6 @@ int check_cycle(listint_t *list)
 {
 struct listint_s *a;
 struct listint_s *b;
-int flag = 0;
 
 if (list == NULL)
 {
@@ -27,11 +26,11 @@ while (b->next != NULL)
 {
 if (a == b->next)
 {
-flag = 1;
+return (1);
 }
 b = b->next;
 }
 a = a->next;
 }
-return (flag);
+return (0);
 }
