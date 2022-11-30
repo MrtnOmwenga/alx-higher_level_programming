@@ -6,5 +6,5 @@ if number % 10 > 5:
 elif number % 10 == 0:
     print(f"Last digit of {number:d} is {number%10:d} and is 0")
 else:
-    print(f"Lat digit of {number:d} is {number%10:d} and is \
+    print(f"Lat digit of {number:d} is {number%10} and is \
 less that 6 and not 0")
