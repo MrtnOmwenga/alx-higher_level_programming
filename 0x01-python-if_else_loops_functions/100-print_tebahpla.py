@@ -5,4 +5,4 @@ while i >= 97:
         print("{c:c}".format(c=i - 32), end="")
     else:
         print("{c:c}".format(c=i), end="")
-    i=i - 1
+    i = i - 1
