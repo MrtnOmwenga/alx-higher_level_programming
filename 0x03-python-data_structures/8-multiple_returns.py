@@ -5,6 +5,6 @@ def multiple_returns(sentence):
         length = len(sentence)
     else:
         first = None
-        length = 0
+        length = len(sentence)
     tup = (length, first)
     return (tup)
