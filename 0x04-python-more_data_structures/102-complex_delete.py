@@ -5,4 +5,3 @@ def complex_delete(a_dictionary, value):
         if value == dict_value:
             new_dict.pop(key, 0)
     return (a_dictionary)
-    
