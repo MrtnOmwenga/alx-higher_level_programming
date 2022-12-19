@@ -2,8 +2,10 @@
 def safe_print_division(a, b):
     print("Inside result: ", end = "")
     try:
-        print("{}".format(a / b))
-        return (a / b)
+        result = (a / b)
+        return (result)
     except ZeroDivisionError:
-        print("None")
-        return (None)
+        result = None
+        return (result)
+    finally:
+        print("{}".format(result))
