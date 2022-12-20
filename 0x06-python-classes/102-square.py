@@ -18,7 +18,7 @@ class Square:
         size(self, value)
         area(self)
     """
-    
+
     def __init__(self, size=0):
         """
         Initializes square
@@ -32,7 +32,7 @@ class Square:
         """"
         Getter
         Return: size
-        """        
+        """
         return self.__size
 
     @size.setter
