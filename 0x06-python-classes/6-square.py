@@ -11,10 +11,10 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.size = size
+            self._Square__size = size
 
         if type(position) is tuple and len(position) == 2:
-            self.position = position
+            self._Square__position = position
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
@@ -56,7 +56,6 @@ class Square:
             print("")
         else:
             print("\n" * self._Square__position[1], end="")
-            for i in range(self._Square__size):
-                print(" " * self._Square__position[0], end="")
-                print("#" * self._Square__size, end="")
-                print("")
+            print("\n".join([" " * self.__position[0] +
+                             "#" * self.__size
+                             for rows in range(self.__size)]))
