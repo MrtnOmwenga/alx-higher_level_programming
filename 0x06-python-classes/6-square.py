@@ -11,10 +11,10 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self._Square__size = size
+            self.size = size
 
         if type(position) is tuple and len(position) == 2:
-            self._Square__position = position
+            self.position = position
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
