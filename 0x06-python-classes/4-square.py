@@ -26,9 +26,8 @@ class Square:
     def size(self, value):
         """Sets size"""
         if type(value) is not int:
-            raise TypeError("size mut be integer")
+            raise TypeError("size must be integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self._Square__size = value
-        
