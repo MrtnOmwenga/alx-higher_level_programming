@@ -52,7 +52,7 @@ class Square:
 
     def my_print(self):
         """Prints square using #"""
-        if (self._Square__size) == 0:
+        if self._Square__size == 0:
             print("")
         else:
             print("\n" * self._Square__position[1], end="")
