@@ -7,7 +7,7 @@ Adds Private instance attribute width and height
 
 class Rectangle:
     """Class with private attributes width and height"""
-    
+
     def __init__(self, width=0, height=0):
         """Initialize class"""
 

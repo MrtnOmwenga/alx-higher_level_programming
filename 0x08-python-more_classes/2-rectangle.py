@@ -9,7 +9,7 @@ area and perimeter
 
 class Rectangle:
     """Class with private attributes width and height"""
-    
+
     def __init__(self, width=0, height=0):
         """Initialize class"""
 
