@@ -39,7 +39,7 @@ class Rectangle:
 
     def __repr__(self):
         """Return string representation of object"""
-        result =  ""
+        result = ""
         result += "Rectangle("
         result += str(self._Rectangle__width)
         result += ", "
