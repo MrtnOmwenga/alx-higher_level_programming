@@ -101,6 +101,7 @@ class Rectangle:
             return (0)
         return (2 * (self._Rectangle__width + self._Rectangle__height))
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Compares rectangles"""
         if not isinstance(rect_1, Rectangle):
