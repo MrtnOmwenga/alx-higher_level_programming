@@ -7,6 +7,7 @@ div mut be an integer or float
 Result must be rounded to 2 decimal places
 """
 
+
 def matrix_divided(matrix, div):
     """Divides matrix by div"""
 
@@ -21,16 +22,20 @@ def matrix_divided(matrix, div):
 
     """Check matrix"""
     if matrix is None:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix \
+(list of lists) of integers/floats")
     for element in matrix:
         if type(element) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("matrix must be a matrix \
+(list of lists) of integers/floats")
         if len(element) != len(matrix[0]):
-            raise TypeError("Each row of the matrix must have the same size")
+            raise TypeError("Each row of the matrix \
+must have the same size")
         for item in element:
             if type(item) not in [int, float]:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-        
+                raise TypeError("matrix must be a matrix \
+(list of lists) of integers/floats")
+
     """Result"""
     result = []
     for i in range(len(matrix)):

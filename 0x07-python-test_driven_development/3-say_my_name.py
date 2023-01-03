@@ -4,6 +4,7 @@ prints "My name is <first name> <last name>
 Both first and last names must be strings
 """
 
+
 def say_my_name(first_name, last_name=""):
     """Prints first name and last name"""
 

@@ -5,6 +5,7 @@ size is the length of the square
 size must be an integer greater than 0
 """
 
+
 def print_square(size):
     """Prints a square using #"""
 
