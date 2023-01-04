@@ -10,14 +10,18 @@ class TestMaxInteger(unittest.TestCase):
         """Tests max_integer function"""
 
         def test_module_docstring(self):
+                """Check if module had proper documentation"""
                 moduleDoc = __import__('6-max_integer').__doc__
                 self.assertTrue(len(moduleDoc) > 1)
 
         def test_function_docstring(self):
+                """Check of function has proper documentation"""
                 functionDoc = __import__('6-max_integer').max_integer.__doc__
                 self.assertTrue(len(functionDoc) > 1)
 
         def test_signed_ints_and_floats(self):
+                """Check function return correct result -
+                Ints and floats"""
                 self.assertEqual(max_integer([0]), 0)
                 self.assertEqual(max_integer([1, 2, 3, 4]), 4)
                 self.assertEqual(max_integer([1, 2, 3, -4]), 3)
@@ -26,15 +30,18 @@ class TestMaxInteger(unittest.TestCase):
                 self.assertEqual(max_integer([{1, 9}, {2}, {3}]), {1, 9})
 
         def test_list_of_strings(self):
+                """Check function returns correct result - Strings"""
                 self.assertEqual(max_integer("6789"), '9')
                 self.assertEqual(max_integer("abcxyz"), 'z')
                 self.assertEqual(max_integer(['a', 'b', 'c', 'x', 'y', 'z']), 'z')
                 self.assertEqual(max_integer(["abc", 'x']), 'x')
 
         def test_lists(self):
+                """Check function returns correct result- List"""
                 self.assertEqual(max_integer([[1, 2], [1, 3]]), [1, 3])
 
         def test_other_sequences(self):
+                """Check function handles incorrect input"""
                 with self.assertRaises(TypeError):
                         max_integer({1, 2}, {3, 4, 5})
                 with self.assertRaises(TypeError):
@@ -45,6 +52,7 @@ class TestMaxInteger(unittest.TestCase):
                         max_integer([None, True])
 
         def test_None(self):
+                """Check function handles empty input"""
                 self.assertIsNone(max_integer([]), None)
                 self.assertIsNone(max_integer(), None)
                 self.assertIsNone(max_integer([None]), None)
