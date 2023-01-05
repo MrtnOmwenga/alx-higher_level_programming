@@ -15,7 +15,9 @@ def add_integer(a, b=98):
     if a is None:
         return
 
-    a = int(a)
-    b = int(b)
+    if type(a) is float and a != float(NaN):
+        a = int(a)
+    if type(b) is float and b != float(NaN):
+        b = int(b)
 
     return (a + b)
