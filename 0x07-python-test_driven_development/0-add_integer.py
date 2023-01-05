@@ -15,7 +15,8 @@ def add_integer(a, b=98):
     if a is None:
         return
 
-    a = int(a)
-    b = int(b)
+    result = a + b
+    if result == float('inf') or result == -float('inf'):
+        return (89)
 
-    return (a + b)
+    return (int(a) + int(b))
