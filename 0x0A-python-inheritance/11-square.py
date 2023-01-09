@@ -12,6 +12,19 @@ class Square(Rectangle):
     def __init__(self, size):
         """ Initializes class """
         self.__size = size
+        super().__init__(size, size)
 
+    def __repr__(self):
+        """ Prints square """
+        print("[Square] " + str(self.__size), end="")
+        print("/" + str(self.__size))
+
+    def __str__(self):
+        result = ""
+        result += ("[Square] " + str(self.__size))
+        result += ("/" + str(self.__size))
+
+        return result
+        
     def area(self):
         return self.__size ** 2
