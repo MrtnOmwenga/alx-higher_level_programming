@@ -25,6 +25,6 @@ class Square(Rectangle):
         result += ("/" + str(self.__size))
 
         return result
-        
+
     def area(self):
         return self.__size ** 2
