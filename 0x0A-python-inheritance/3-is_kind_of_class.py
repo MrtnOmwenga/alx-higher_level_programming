@@ -6,5 +6,5 @@ of specifies class
 
 
 def is_kind_of_class(obj, a_class):
-    """ Uses type and issubclass function"""
+    """ Uses isinstance function"""
     return isinstance(obj, a_class)
