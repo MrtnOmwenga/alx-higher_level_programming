@@ -21,13 +21,13 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         result = ""
-        result += ("Rectangle " + str(self.__width))
+        result += ("[Rectangle] " + str(self.__width))
         result += ("/" + str(self.__height))
 
         return result
 
     def __repr__(self):
-        print("Rectangle " + str(self.__width), end="")
+        print("[Rectangle] " + str(self.__width), end="")
         print("/" + str(self.__height))
 
     def area(self):
