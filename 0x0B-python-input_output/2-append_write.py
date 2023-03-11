@@ -9,4 +9,4 @@ def append_write(filename="", text=""):
     Open file and append test
     """
     with open(filename, 'a+') as file:
-        return(file.append(text))
+        return(file.write(text))
