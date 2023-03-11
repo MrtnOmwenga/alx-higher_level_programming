@@ -18,8 +18,7 @@ try:
 except:
      with open(filename, mode='w') as json_file:
         obj = []
-        
-for item in sys.argv[1:]:
-    obj.append(item)
-
-save_to_json_file(obj, filename)
+finally:        
+    for item in sys.argv[1:]:
+        obj.append(item)
+    save_to_json_file(obj, filename)
