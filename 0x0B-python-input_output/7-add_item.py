@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""add all argument to a python list
-and save them to a file"""
+"""
+Load list obj
+add element to list
+Save the list
+"""
 import sys
 
 
@@ -15,5 +18,6 @@ except FileNotFoundError:
     with open(filename, mode='w') as json_file:
         obj = []
 finally:
-    obj += sys.argv[1:]
+    for item in sys.argv[1:]:
+        obj.append(item)
     save_to_json_file(obj, filename)
