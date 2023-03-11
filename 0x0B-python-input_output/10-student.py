@@ -22,4 +22,13 @@ class Student:
         """
         Converts self to json
         """
-        return(self[attrs])
+        if attrs is not None:
+            new_dict = {}
+            for i in attrs:
+                try:
+                    new_dict[i] = self.__dict__[i]
+                except Exception:
+                    continue
+            return new_dict
+        else:
+            return self.__dict__
