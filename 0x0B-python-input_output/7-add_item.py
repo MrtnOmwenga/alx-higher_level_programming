@@ -12,7 +12,7 @@ filename = "add_item.json"
 try:
     obj = load_from_json_file(filename)
 except FileNotFoundError:
-    with open(filename, mode='w') as file:
+    with open(filename, mode='w') as json_file:
         obj = []
 finally:
     obj += sys.argv[1:]
