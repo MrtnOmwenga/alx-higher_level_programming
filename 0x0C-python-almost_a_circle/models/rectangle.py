@@ -13,17 +13,23 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor"""
-        items = {width: "width", height: "height", x: "x", y:"y"}
+        items = {1: "width", 2: "height", 3: "x", 4: "y"}
+        i = 1
         for item in [width, height, x, y]:
             if type(item) is not int:
-                raise TypeError("{} must be an integer".format(items[item]))
+                raise TypeError("{} must be an integer".format(items[i]))
+            i += 1
+        i = 1
         for item in [width, height]:
             if item <= 0:
-                raise ValueError("{} must be > 0".format(items[item]))
+                raise ValueError("{} must be > 0".format(items[i]))
+            i += 1
+        i = 3
         for item in [x, y]:
             if item < 0:
-                raise ValueError("{} must be >= 0".format(items[item]))
-        
+                raise ValueError("{} must be >= 0".format(items[i]))
+            i += 1
+
         self.__width = width
         self.__height = height
         self.__x = x
