@@ -118,3 +118,26 @@ class Rectangle(Base):
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
+
+    def update(self, *args):
+        """Updated Rectangle"""
+        try:
+            self.id = args[0]
+        except Exception:
+            pass
+        try:
+            self.__width = args[1]
+        except Exception:
+            pass
+        try:
+            self.__height = args[2]
+        except Exception:
+            pass
+        try:
+            self.__x = args[3]
+        except Exception:
+            pass
+        try:
+            self.__y = args[4]
+        except Exception:
+            pass
