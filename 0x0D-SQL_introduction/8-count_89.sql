@@ -1,2 +1,2 @@
--- Select records where id=89
-SELECT * FROM first_table WHERE id=89;
+-- Count records where id=89
+SELECT COUNT(*) FROM first_table WHERE id=89;
