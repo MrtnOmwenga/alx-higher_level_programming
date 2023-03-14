@@ -1,6 +1,4 @@
 #!usr/bin/node
-//Include process module
-const process = require('process');
 
 const args = process.argv;
 if (args.length == 0){
