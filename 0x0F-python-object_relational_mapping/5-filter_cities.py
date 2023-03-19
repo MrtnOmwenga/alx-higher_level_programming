@@ -17,8 +17,8 @@ if __name__ == "__main__":
                            db=sys.argv[3],
                            charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT * FROM cities WHERE \
-    state_id = (SELECT id FROM state WHERE \
+    cur.execute("SELECT name FROM cities WHERE \
+    state_id = (SELECT id FROM states WHERE \
     name = %(name)s)", {'name': sys.argv[4]})
     query_rows = cur.fetchall()
     for row in query_rows:
