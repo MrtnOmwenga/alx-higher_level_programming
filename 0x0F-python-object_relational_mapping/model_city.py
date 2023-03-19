@@ -11,6 +11,7 @@ from sqlalchemy.ext.declarative import declarative_base
 mymetadata = MetaData()
 Base = declarative_base(metadata=mymetadata)
 
+
 class City(Base):
     """ Class city with id and name attributes """
     __tablename__ = 'cities'
