@@ -19,8 +19,8 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE \
     CONVERT(`name` USING Latin1) \
-    COLLATE Latin1_General_CS = %(username)s \
-    ORDER BY id ASC", {'username' : sys.argv[4]})
+    COLLATE Latin1_General_CS = %(name)s \
+    ORDER BY id ASC", {'name': sys.argv[4]})
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
