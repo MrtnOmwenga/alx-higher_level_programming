@@ -18,7 +18,7 @@ if __name__ == "__main__":
                            charset="utf8")
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE \
-    name CONVERT(`name` USING Latin1) \
+    CONVERT(`name` USING Latin1) \
     COLLATE Latin1_General_CS LIKE 'N%' ORDER BY id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
