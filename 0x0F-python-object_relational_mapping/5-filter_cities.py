@@ -21,7 +21,9 @@ if __name__ == "__main__":
     state_id = (SELECT id FROM states WHERE \
     name = %(name)s)", {'name': sys.argv[4]})
     query_rows = cur.fetchall()
+    result = []
     for row in query_rows:
-        print(row)
+        result.append(row[0])
+    print(*result, sep=", ")
     cur.close()
     conn.close()
