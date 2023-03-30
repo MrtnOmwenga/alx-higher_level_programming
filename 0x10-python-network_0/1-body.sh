@@ -1,3 +1,3 @@
 #!/bin/bash
 # Display body of a response
-curl -sI $1 | awk '/Body/ {print $2}'
+curl -s -o /dev/null -w "%{http_code}" "$1" | grep -q 200 && curl -s "$1"
