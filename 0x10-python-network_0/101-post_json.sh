@@ -1,3 +1,3 @@
 #!/bin/bash
 # POST using a file
-curl -sSL -d @"$2" -X POST "$1"
+curl -s -H 'Content-Type: application/json' -d "$(cat "$2")" -X POST "$1"
