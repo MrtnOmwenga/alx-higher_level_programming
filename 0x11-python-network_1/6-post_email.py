@@ -7,5 +7,5 @@ if __name__ == '__main__':
     import sys
 
     email_dict = {'email': sys.argv[2]}
-    data = requests.post(sys.argv[1], json=email_dict)
+    data = requests.post(sys.argv[1], data=email_dict)
     print(data.text)
