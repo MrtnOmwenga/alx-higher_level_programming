@@ -9,6 +9,6 @@ if __name__ == '__main__':
     email_dict = {'email': sys.argv[2]}
     data = parse.urlencode(email_dict).encode()
     req = request.Request(sys.argv[1], data=data)
-    response = request.urlopen(req)
 
-    print(response.read())
+    with request.urlopen(req) as response:
+        print(response.read())
